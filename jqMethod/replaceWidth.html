@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id = "test" >
+        <input value="123">
+        <span ui-type = 'table'>red</span>
+        <span ui-type = 'table'>green</span>
+    </div>
+    <span id='test2'>
+        114111
+        <span ui-type = 'table'>red</span>
+    </span>
+    <span>
+       <span ui-type = 'table'>red</span>
+    </span>
+   <button>replaceWith</button>
+</body>
+<script>
+    // This example demonstrates that the selected element replaces 
+    // the target by being moved from its old location, not by being cloned.
+    var p = $('#test2')
+    $('#test').find('input').replaceWith(p)
+    var a = $('#test').find('[ui-type]').css('color','red');
+    console.log(a);
+    var b = $.merge([66,55],a);
+    console.log(b)
+    $('button').click(function(){
+        $(this).replaceWith(p)
+    })
+</script>
+</html>
