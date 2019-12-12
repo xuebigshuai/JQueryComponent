@@ -1,0 +1,22 @@
+{
+  "name": "jquerycomponent",
+  "version": "1.0.0",
+  "description": "\"# JQueryComponent\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuebigshuai/JQueryComponent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuebigshuai/JQueryComponent/issues"
+  },
+  "homepage": "https://github.com/xuebigshuai/JQueryComponent#readme",
+  "dependencies": {
+    "jquery": "^1.11.0"
+  }
+}

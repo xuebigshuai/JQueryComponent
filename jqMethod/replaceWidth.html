@@ -21,6 +21,7 @@
        <span ui-type = 'table'>red</span>
     </span>
    <button>replaceWith</button>
+   <p id='dataUI' data-ui='obj.color'></p>
 </body>
 <script>
     // This example demonstrates that the selected element replaces 
@@ -34,5 +35,14 @@
     $('button').click(function(){
         $(this).replaceWith(p)
     })
+    ///
+    var obj={
+        color:{
+            red:'#e50000',
+            blue:'blue'
+        }
+    }
+    var ui = $('#dataUI').data();
+    console.log(ui);
 </script>
 </html>

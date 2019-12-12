@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+var d1 = $.Deferred();
+var d2 = $.Deferred();
+setTimeout(() => {
+    d1.resolve( "Fish" );
+    d2.resolve( "Pizza" );
+}, 3000);
+
+ 
+$.when( d1, d2 ).done(function ( v1, v2 ) {
+    console.log( v1 ); // "Fish"
+    console.log( v2 ); // "Pizza"
+});
+ 
+setTimeout(() => {
+    d1.resolve( "Fish" );
+   d2.resolve( "Pizza" );
+}, 3000);
+</script>
+</html>
